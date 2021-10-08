@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Hind&family=Poppins:wght@700&display=swap');
 html,
 body {
   padding: 0;
@@ -14,3 +16,36 @@ a {
 * {
   box-sizing: border-box;
 }
+h1{
+  font-family: 'Poppins', sans-serif;
+  font-size: 64px;
+  color: #50505F;
+  
+}
+
+h3{
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  color: #50505F;
+}
+
+p{
+  font-family: 'Hind', sans-serif;
+  font-size: 18px;
+  color: #090909;
+}
+
+.stone-gray{
+  color: #50505F;
+}
+
+.black{
+  color: #090909;
+}
+
+.white{
+  color: #FAFEFF;
+}
+ .light-gray{
+   color: #C0C0C0;
+ }
