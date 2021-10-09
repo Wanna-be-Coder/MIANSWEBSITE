@@ -10,11 +10,11 @@ const HeroSection = () => {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           height: "100vh",
-          width: "100%"
+          width: "100vw"
         }}
         className="logo"
         >
-          <Image src="/logo.png" width={400} height={150} />
+          <Image src="/logo.png" alt="logo" width={400} height={150} />
         
         <h1>Reflection of your desire</h1>
         

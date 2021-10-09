@@ -1,0 +1,15 @@
+.tabSections {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.description {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.half {
+  max-width: 50%;
+  text-align: left;
+}
