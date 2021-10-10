@@ -1,11 +1,28 @@
-import React from 'react'
+import React from "react";
 
-const TabButton = (props) => {
-    return (
-        <div>
-             <button className="tabButton"> <h4>{props.name}</h4></button>
-        </div>
-    )
-}
+const TabButton = ({ name, handleClick, selected }) => {
+  let Buttonstyle = {};
+  let textStyle = {};
+  if (name === selected) {
+    Buttonstyle = {
+      backgroundColor: "#50505f",
+    };
+    textStyle = {
+      color: "#fafeff",
+    };
+  }
+  return (
+    <div>
+      <button
+        className={`tabButton`}
+        style={Buttonstyle}
+        onClick={() => handleClick(name)}
+      >
+        {" "}
+        <h4 style={textStyle}>{name}</h4>
+      </button>
+    </div>
+  );
+};
 
-export default TabButton
+export default TabButton;

@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import TabButton from "../TabButton/TabButton";
 import style from "../../styles/ServiceSection.module.css";
-import { brandGuideLineText } from "./paragraphs";
+import {
+  brandGuideLineText,
+  businessDevText,
+  designText,
+  webDevText,
+} from "./paragraphs";
 import Image from "next/image";
 import BrandGuideLineImage from "./brandGuideLine.svg";
+import BusinessDevImage from "./BUSINESSDEV.svg";
+import DesignImage from "./DESIGN.svg";
+import WebAppImage from "./WEBAPP.svg";
 
 export const ServiceSection = () => {
+  const [selected, setselected] = useState("Brand Strategy");
+  const handleClick = (text) => {
+    console.log(text);
+    setselected(text);
+  };
   return (
     <div>
       <div className="logo">
@@ -19,10 +32,26 @@ export const ServiceSection = () => {
       </div>
       <br />
       <div className={style.tabSections}>
-        <TabButton name="Brand Strategy" />
-        <TabButton name="Business Development" />
-        <TabButton name="Design" />
-        <TabButton name="Web Application" />
+        <TabButton
+          name="Brand Strategy"
+          handleClick={handleClick}
+          selected={selected}
+        />
+        <TabButton
+          name="Business Development"
+          handleClick={handleClick}
+          selected={selected}
+        />
+        <TabButton
+          name="Design"
+          handleClick={handleClick}
+          selected={selected}
+        />
+        <TabButton
+          name="Web Application"
+          handleClick={handleClick}
+          selected={selected}
+        />
       </div>
       <br />
 
@@ -30,11 +59,25 @@ export const ServiceSection = () => {
         <p className={style.half}>
           {" "}
           <br /> <br />
-          {brandGuideLineText}
+          {selected === "Brand Strategy"
+            ? brandGuideLineText
+            : selected === "Business Development"
+            ? businessDevText
+            : selected === "Design"
+            ? designText
+            : webDevText}
         </p>
         <div>
           <Image
-            src={BrandGuideLineImage}
+            src={
+              selected === "Brand Strategy"
+                ? BrandGuideLineImage
+                : selected === "Business Development"
+                ? BusinessDevImage
+                : selected === "Design"
+                ? DesignImage
+                : WebAppImage
+            }
             alt="BrandGuideLine"
             className={style.half}
             width={418.7}
