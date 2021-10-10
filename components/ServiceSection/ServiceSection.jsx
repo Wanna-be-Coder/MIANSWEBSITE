@@ -16,7 +16,6 @@ import WebAppImage from "./WEBAPP.svg";
 export const ServiceSection = () => {
   const [selected, setselected] = useState("Brand Strategy");
   const handleClick = (text) => {
-    console.log(text);
     setselected(text);
   };
   return (
